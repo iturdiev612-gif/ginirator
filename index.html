@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Найди пару — игра на память</title>
+<link rel="stylesheet" href="style.css">
+<script src="game.js" defer></script>
+</head>
+<body>
+<main class="app">
+<header><a class="brand" href="./">✦ PLAY / MEMORY</a><span class="badge">Тренируй память, играя</span></header>
+<section class="intro"><p class="eyebrow">МАЛЕНЬКАЯ ИГРА • БОЛЬШАЯ ПАМЯТЬ</p><h1>Всё дело<br>в <em>совпадениях.</em></h1><p class="subtitle">Открывай карточки, запоминай картинки и находи пары.<br>Посмотрим, как быстро ты соберёшь их все.</p></section>
+<section class="layout">
+<div class="play-panel">
+<div class="toolbar"><label>Сложность<select id="difficulty"><option value="4">Легко · 4 × 4</option><option value="6">Средне · 6 × 6</option><option value="8">Сложно · 8 × 8</option></select></label><label>Тема карточек<select id="theme"><option value="nature">Природа</option><option value="food">Вкусности</option><option value="space">Космос и приключения</option></select></label><button id="restart" class="restart">↻ <span>Новая игра</span></button></div>
+<div class="stats" aria-label="Статистика игры"><div><span>ВРЕМЯ</span><strong id="time">00:00</strong></div><div><span>ХОДЫ</span><strong id="moves">0</strong></div><div><span>КЛИКИ</span><strong id="clicks">0</strong></div><div><span>НАЙДЕНО ПАР</span><strong id="pairs">0 / 8</strong></div></div>
+<div id="board" class="board" aria-label="Игровое поле"></div>
+<p id="status" class="status" role="status" aria-live="polite">Открой первую карточку — и время пойдёт.</p>
+</div>
+<aside><section class="record-card"><div class="section-icon">↗</div><h2>Твои рекорды</h2><p>Каждая партия — шанс стать лучше.</p><ol id="records"></ol><p class="record-note">Сначала меньше ходов,<br>затем лучшее время.</p></section><section class="how"><h2>Как играть</h2><p><b>01</b> Открой две карточки.</p><p><b>02</b> Совпали? Пара твоя.</p><p><b>03</b> Найди их все!</p><span>Можно играть с клавиатуры:<br>Tab для выбора, Enter для открытия.</span></section></aside>
+</section><footer>Сделай паузу. Найди пару. <span>Создано для любопытных умов ✦</span></footer>
+</main>
+<dialog id="victory"><div class="win-icon">✦</div><h2>Идеальная пара.<br>И ещё одна победа!</h2><p id="result"></p><button id="again">Сыграть ещё</button><button id="close-dialog" class="secondary">Посмотреть поле</button></dialog>
+</body></html>
